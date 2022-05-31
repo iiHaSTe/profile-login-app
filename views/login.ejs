@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include("./patt/head.ejs") -%>
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+  <% if (locals.retrying){ %>
+  <script>
+Swal.fire({
+  title: 'Error!',
+  text: 'Email or password is not correcte\nTry Again??',
+  icon: 'error',
+  confirmButtonText: 'ok'
+})
+  </script>
+  <% } %>
+  <main class="container">
+    <h1>Hello!</h1>
+    <p>
+      Hope you have the best experience
+    </p>
+    <form method="post">
+      <div>
+        <span>
+          <input type="text" placeholder="Email" id="email" name="email" />
+          <i id="email-icon" class="fa fa-at"></i>
+        </span>
+        <span>
+          <input type="password" placeholder="Password" id="password" name="pass" />
+          <i id="pass-icon" style="margin-top: 5px;" class="fa fa-lock"></i>
+        </span>
+        <div class="opt">
+          <input type="submit" value="submit" />
+          <input type="submit" value="create one"/>
+        </div>
+        <a href="#">Forgot Password?</a>
+      </div>
+    </form>
+  </main>
+  <script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+/***********************************************************************************************************************************************************************************************************************************************************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: 'Ubuntu', sans-serif;
+}
+body {
+  text-align: center;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #14CDFF;
+  background-image: linear-gradient(60deg, #123E61, #47167E);
+}
+main.container {
+  color: white;
+  display: block;
+  min-width: 50%;
+  max-width: 80%;
+  border: 1px dotted #D4FF24;
+  /*background-color: #1F7EFF;*/
+  padding: 17px;
+  border-radius: 5px;
+}
+
+main.container h1 {
+  font-weight: 200;
+  font-size: clamp(1.3em, 2em, 3em);
+}
+main.container p {
+  margin-top: clamp(7px, 14px, 24px);
+  margin-bottom: clamp(7px, 40px, 60px);
+  color: white;
+  font-size: clamp(10px, 13px, 30px);
+  padding: 3px clamp(13px, 13px, 40px);
+}
+main.container form > div {
+  text-align: center;
+}
+main.container form > div input {
+  display: block;
+  margin-top: 14px;
+  padding: clamp(6px, 9px, 15px);
+  padding-right: clamp(20px, 30px, 40px);
+  background-color: #FDFDFD;
+  color: black;
+  border: 2px solid #D5D5D5;
+  border-radius: 2px;
+  font-size: clamp(14px, 16px, 20px);
+  width: 100%;
+  outline: none;
+}
+main.container form > div > span {
+  position: relative;
+  box-sizing: border-box;
+}
+main.container form > div > span i {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: grey;
+  padding: clamp(7px, 8px, 16px);
+  height: 100%;
+}
+div.opt {
+  text-align: center;
+  padding: 0px clamp(14px, 19px, 27px);
+  display: flex;
+  justify-content: space-between;
+}
+div.opt input[type="submit"] {
+  background-color: #9B15FF;
+  margin: 14px auto;
+  width: 45%;
+  display: inline-block;
+  border-color: #6817CA;
+  color: white;
+  transition: .5s;
+  outline: none;
+  padding: clamp(6px, 9px, 15px);
+}
+div.opt input[type="submit"]:hover {
+  transform: scale(1.2, 1.2);
+}
+div.opt input[type="submit"]:first-child {
+  background-color: #1DBE56;
+  border-color: #1EA44E;
+  color: black;
+}
+main.container form > div a {
+  text-decoration: none;
+  color: white;
+  font-size: clamp(10px, 12px, 14px);
+  outline: none;
+}
+main.container form > div a:hover {
+  color: #13C3FF;
+  text-decoration: #13C3FF;
+}
+
+@media screen and (min-width: 800px) {
+  main.container > div input {
+    border-width: 3px;
+  }
+}

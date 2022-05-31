@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include("./patt/head.ejs") -%>
+  <title>Hi <%- locals.name -%></title>
+  <link rel="stylesheet" type="text/css" href="css/profile.css"/>
+</head>
+<body>
+  <main>
+    <img src="<%- locals.banner -%>" alt="banner" class="banner"/>
+    <img src="<%- locals.avatar -%>" alt="logo" class="logo"/>
+    <div class="info">
+      <p><%- locals.name -%></p>
+      <p><%- locals.userDate -%></p>
+    </div>
+    <div class="game-info">
+      <span id="level"><%- locals.level -%></span>
+      <i></i>
+      <span id="score"><%- locals.score -%></span>
+    </div>
+    <button>folow</button>
+  </main>
+  <script src="js/profile.js"></script>
+</body>
+</html>
