@@ -6,6 +6,7 @@ body {
   place-items: center;
   background-color: #14CDFF;
   background-image: linear-gradient(60deg, rgb(50, 135, 149), rgb(153, 0, 240));
+  background-attachment: fixed;
 }
 
 main {
@@ -17,7 +18,8 @@ main {
   overflow: hidden;
   background-color: #FAFAFA45;
   box-shadow: 0 0 5px #4E4E4E,
-    0 0 10px #4E4E4E;
+              0 0 10px #4E4E4E;
+  border: 2px dashed #e4ff00;
 }
 
 main>.banner {
@@ -102,7 +104,7 @@ main .info p:last-child {
 main button {
   position: absolute;
   left: 50%;
-  transform: translate(-50%, 0px);
+  transform: translate(-50%, -100%);
   display: block;
   width: 70%;
   padding: clamp(10px, 15px, 18px);
@@ -114,8 +116,15 @@ main button {
   transition: .5s;
 }
 
+main button span {
+  color: #222;
+  font-size: 12pt;
+  font-weight: 300;
+  float: right;
+}
+
 main button:hover {
-  transform: translate(-50%, 0px) scale(1.1, 1.1);
+  transform: translate(-50%, -100%) scale(1.2, 1.2);
 }
 
 @media screen and (min-width: 900px) {

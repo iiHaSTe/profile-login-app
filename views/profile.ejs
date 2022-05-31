@@ -3,22 +3,28 @@
 <head>
   <%- include("./patt/head.ejs") -%>
   <title>Hi <%- locals.name -%></title>
-  <link rel="stylesheet" type="text/css" href="css/profile.css"/>
+  <link rel="stylesheet" type="text/css" href="css/profile.css" />
 </head>
 <body>
   <main>
-    <img src="<%- locals.banner -%>" alt="banner" class="banner"/>
-    <img src="<%- locals.avatar -%>" alt="logo" class="logo"/>
+    <img src="<%- locals.banner -%>" alt="banner" class="banner" />
+    <img src="<%- locals.avatar -%>" alt="logo" class="logo" />
     <div class="info">
-      <p><%- locals.name -%></p>
-      <p><%- locals.userDate -%></p>
+      <p>
+        <%- locals.name -%>
+      </p>
+      <p>
+        <%- locals.userDate -%>
+      </p>
     </div>
     <div class="game-info">
       <span id="level"><%- locals.level -%></span>
       <i></i>
       <span id="score"><%- locals.score -%></span>
     </div>
-    <button>folow</button>
+    <button id="folow">
+      folow <span><%- locals.folowers -%></span>
+    </button>
   </main>
   <script src="js/profile.js"></script>
 </body>
